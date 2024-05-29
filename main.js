@@ -12,9 +12,9 @@ const material = new THREE.MeshNormalMaterial({
     map: texture,
 });
 
-const material2 = new THREE.MeshBasicMaterial({
+const material2 = new THREE.MeshNormalMaterial({
     color: 0x00ff00,
-    wireframe: true
+    blending: THREE.AdditiveBlending
 });
 
 // Geometry
