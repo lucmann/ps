@@ -7,19 +7,21 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const geometry = new THREE.IcosahedronGeometry( 2, 0 );
 const texture = new THREE.TextureLoader().load('textures/crate-base.png');
-const material = new THREE.MeshBasicMaterial( { map: texture } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+const material = new THREE.MeshNormalMaterial({
+    map: texture
+});
+const polyhedron = new THREE.Mesh( geometry, material );
+scene.add( polyhedron );
 
 camera.position.z = 5;
 
 function animate() {
     requestAnimationFrame( animate );
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    polyhedron.rotation.x += 0.01;
+    polyhedron.rotation.y += 0.01;
 
     renderer.render( scene, camera );
 }
