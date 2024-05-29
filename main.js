@@ -25,7 +25,7 @@ icosahedron.computeBoundingSphere();
 
 // Mesh
 const icosaCircumSphereMesh = new THREE.Mesh(
-    new THREE.SphereGeometry(icosahedron.boundingSphere.radius, 32, 16),
+    new THREE.SphereGeometry(icosahedron.boundingSphere.radius, 64, 32),
     material2
 );
 const icosaMesh = new THREE.Mesh( icosahedron, material );
