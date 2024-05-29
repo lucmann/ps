@@ -14,7 +14,9 @@ const material = new THREE.MeshNormalMaterial({
 
 const material2 = new THREE.MeshNormalMaterial({
     color: 0x00ff00,
-    blending: THREE.AdditiveBlending
+    blending: THREE.AdditiveBlending,
+    opacity: 0.3,
+    transparent: true,
 });
 
 // Geometry
